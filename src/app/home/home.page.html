@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Luther Ionic Demo Store<ion-button (click)="logout()"> Logout </ion-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">  
+  <div *ngFor="let product of products">
+    <ion-card>
+      <ion-card-header>
+        <img src="{{ product.image }}" alt="demo-logo">
+        <ion-card-title>{{ product.name }}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{ product.description }}
+      </ion-card-content>
+
+      <ion-button type="button" (click)="share()"> Share </ion-button>
+    </ion-card>  
+  </div>
+</ion-content>
